@@ -1,0 +1,6 @@
+bank account number,financial type,total amount,transaction id,do not import this
+11,donation,1500,trxn001,It is the duplicated account number.
+12,donation,1500,trxn002,It is the missing contact.
+13,donation,1500,trxn003,It is the wrong contact type.
+14,donation,1500,trxn004,It has to be a successful import.
+14,donation,1500,trxn005,Existing contribution.

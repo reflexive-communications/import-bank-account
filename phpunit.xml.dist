@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<phpunit colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         convertDeprecationsToExceptions="true"
+         bootstrap="tests/phpunit/bootstrap.php"
+         testdox="true">
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <directory>./tests/phpunit</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./</directory>
+            <exclude>
+                <!-- Skip the test directory -->
+                <directory>./tests</directory>
+                <!-- Skip the generated files -->
+                <file>./import_bank_account.php</file>
+                <file>./import_bank_account.civix.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <listeners>
+        <listener class="Civi\Test\CiviTestListener">
+            <arguments/>
+        </listener>
+    </listeners>
+</phpunit>
