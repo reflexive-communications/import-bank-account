@@ -155,30 +155,21 @@ function import_bank_account_civicrm_themes(&$themes)
     _import_bank_account_civix_civicrm_themes($themes);
 }
 
-// --- Functions below this ship commented out. Uncomment as required. ---
-
-/**
- * Implements hook_civicrm_preProcess().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
- */
-//function import_bank_account_civicrm_preProcess($formName, &$form) {
-//
-//}
-
+// The following hooks are implemented by us.
 /**
  * Implements hook_civicrm_navigationMenu().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
  */
-//function import_bank_account_civicrm_navigationMenu(&$menu) {
-//  _import_bank_account_civix_insert_navigation_menu($menu, 'Mailings', [
-//    'label' => E::ts('New subliminal message'),
-//    'name' => 'mailing_subliminal_message',
-//    'url' => 'civicrm/mailing/subliminal',
-//    'permission' => 'access CiviMail',
-//    'operator' => 'OR',
-//    'separator' => 0,
-//  ]);
-//  _import_bank_account_civix_navigationMenu($menu);
-//}
+function custom_imports_civicrm_navigationMenu(&$menu)
+{
+    _custom_imports_civix_insert_navigation_menu($menu, 'Contributions', [
+        'label' => E::ts('Import Contributions (Bank Account)'),
+        'name' => 'import_contribution_bank_account',
+        'url' => 'civicrm/contribute/custom-field-import',
+        'permission' => 'access CiviContribute,edit contributions',
+        'operator' => 'and',
+        'separator' => 0,
+    ]);
+    _custom_imports_civix_navigationMenu($menu);
+}
