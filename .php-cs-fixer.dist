@@ -1,0 +1,16 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__)
+    ->notPath('CRM/ImportBankAccount/Contribution/CustomField/Form/ContactMap.php')
+    ->notPath('CRM/ImportBankAccount/Contribution/CustomField/Form/Preview.php')
+    ->notPath('CRM/ImportBankAccount/Contribution/CustomField/Controller.php')
+    ->notPath('CRM/ImportBankAccount/Contribution/CustomField/Parser.php')
+    ->notPath('CRM/ImportBankAccount/Contribution/CustomField/StateMachine.php');
+
+$config = new PhpCsFixer\Config();
+return $config->setRules([
+    '@PSR2' => true,
+])
+    ->setFinder($finder)
+    ->setCacheFile(__DIR__.'/.php_cs.cache');
