@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/contribute/custom-field-import</path>
+    <page_callback>CRM_ImportBankAccount_Contribution_CustomField_Controller</page_callback>
+    <title>Import Contributions</title>
+    <access_arguments>access CiviContribute,edit contributions</access_arguments>
+    <page_type>1</page_type>
+  </item>
+</menu>
