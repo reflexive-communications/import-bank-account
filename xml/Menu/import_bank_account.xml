@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <menu>
   <item>
-    <path>civicrm/contribute/custom-field-import</path>
+    <path>civicrm/contribute/import/bank-account</path>
     <page_callback>CRM_ImportBankAccount_Contribution_CustomField_Controller</page_callback>
     <title>Import Contributions</title>
     <access_arguments>access CiviContribute,edit contributions</access_arguments>

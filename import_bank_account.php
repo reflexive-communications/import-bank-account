@@ -161,15 +161,15 @@ function import_bank_account_civicrm_themes(&$themes)
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
  */
-function custom_imports_civicrm_navigationMenu(&$menu)
+function import_bank_account_civicrm_navigationMenu(&$menu)
 {
-    _custom_imports_civix_insert_navigation_menu($menu, 'Contributions', [
+    _import_bank_account_civix_insert_navigation_menu($menu, 'Contributions', [
         'label' => E::ts('Import Contributions (Bank Account)'),
         'name' => 'import_contribution_bank_account',
-        'url' => 'civicrm/contribute/custom-field-import',
+        'url' => 'civicrm/contribute/import/bank-account',
         'permission' => 'access CiviContribute,edit contributions',
         'operator' => 'and',
         'separator' => 0,
     ]);
-    _custom_imports_civix_navigationMenu($menu);
+    _import_bank_account_civix_navigationMenu($menu);
 }
