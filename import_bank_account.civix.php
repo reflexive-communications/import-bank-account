@@ -83,7 +83,6 @@ class CRM_ImportBankAccount_ExtensionUtil
     {
         return self::CLASS_PREFIX.'_'.str_replace('\\', '_', $suffix);
     }
-
 }
 
 use CRM_ImportBankAccount_ExtensionUtil as E;
