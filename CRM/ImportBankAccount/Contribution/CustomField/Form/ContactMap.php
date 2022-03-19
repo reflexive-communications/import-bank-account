@@ -15,11 +15,14 @@
  * @copyright CiviCRM LLC https://civicrm.org/licensing
  */
 
+/**
+ * This class gets the name of the file to upload.
+ */
 class CRM_ImportBankAccount_Contribution_CustomField_Form_ContactMap extends CRM_Contribute_Import_Form_MapField {
 
   /**
-   * Check if required fields (amount and financial type) are present.
-   * Exactly one custom field must be set for the contact mapping.
+   * Check if required fields are present.
+   * Required fields: amount and financial type and exactly one custom field must be set for the contact mapping.
    *
    * @param CRM_ImportBankAccount_CustomField_Form_ContactMap $self
    * @param array $importKeys
@@ -48,7 +51,8 @@ class CRM_ImportBankAccount_Contribution_CustomField_Form_ContactMap extends CRM
     return $errors;
   }
 
-  /*
+  /**
+   * Set variables up before form is built.
    * It removes the original contact map fields and then extends the list
    * with the custom fields.
    */
@@ -282,7 +286,7 @@ class CRM_ImportBankAccount_Contribution_CustomField_Form_ContactMap extends CRM
           }
         }
       }
-          $errors = self::customCheckRequiredFields($self, $importKeys, $errors);
+      $errors = self::customCheckRequiredFields($self, $importKeys, $errors);
 
       //at least one field should be mapped during update.
       if ($self->_onDuplicate == CRM_Import_Parser::DUPLICATE_UPDATE) {
