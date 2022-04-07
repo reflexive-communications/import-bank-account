@@ -8,9 +8,9 @@
  */
 class CRM_ImportBankAccount_ExtensionUtil
 {
-    const SHORT_NAME = 'import_bank_account';
-    const LONG_NAME = 'import-bank-account';
-    const CLASS_PREFIX = 'CRM_ImportBankAccount';
+    public const SHORT_NAME = 'import_bank_account';
+    public const LONG_NAME = 'import-bank-account';
+    public const CLASS_PREFIX = 'CRM_ImportBankAccount';
 
     /**
      * Translate a string using the extension's domain.

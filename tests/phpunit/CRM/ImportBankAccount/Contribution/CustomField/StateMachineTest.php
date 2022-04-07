@@ -11,7 +11,7 @@ class CRM_ImportBankAccount_Contribution_CustomField_StateMachineTest extends CR
      * It tests the class constructor.
      * The pages has to be our custom one.
      */
-    public function testConstructor():void
+    public function testConstructor(): void
     {
         $sm = new CRM_ImportBankAccount_Contribution_CustomField_StateMachine(new CRM_ImportBankAccount_Contribution_CustomField_Controller());
         self::assertSame(CRM_ImportBankAccount_Contribution_CustomField_StateMachine::PAGES, $sm->getPages());
