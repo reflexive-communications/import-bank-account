@@ -11,7 +11,7 @@ class CRM_ImportBankAccount_Contribution_CustomField_ControllerTest extends CRM_
      * It tests the class constructor.
      * The state machine has to be our custom one.
      */
-    public function testConstructor():void
+    public function testConstructor(): void
     {
         $controller = new CRM_ImportBankAccount_Contribution_CustomField_Controller();
         $sm = $controller->getStateMachine();

@@ -10,7 +10,7 @@ class CRM_ImportBankAccount_ServiceTest extends CRM_ImportBankAccount_HeadlessBa
     /**
      * It tests the custom text field gathering method.
      */
-    public function testCustomTextFields():void
+    public function testCustomTextFields(): void
     {
         // Create one good field.
         $this->createCustomField('Contact', 'String', 'Text');
@@ -31,7 +31,7 @@ class CRM_ImportBankAccount_ServiceTest extends CRM_ImportBankAccount_HeadlessBa
     /**
      * It tests the custom text field option values.
      */
-    public function testMapCustomFieldsToSelectOptions():void
+    public function testMapCustomFieldsToSelectOptions(): void
     {
         $customData = $this->createCustomField('Contact', 'String', 'Text');
         $mapped = CRM_ImportBankAccount_Service::mapCustomFieldsToSelectOptions(CRM_ImportBankAccount_Service::customTextFields());
@@ -43,7 +43,7 @@ class CRM_ImportBankAccount_ServiceTest extends CRM_ImportBankAccount_HeadlessBa
     /**
      * It tests the custom text field extraction from a given input array.
      */
-    public function testExtractCustomTextFields():void
+    public function testExtractCustomTextFields(): void
     {
         $customData = $this->createCustomField('Contact', 'String', 'Text');
         $keyName = 'custom_'.$customData['field']['id'];
@@ -60,7 +60,7 @@ class CRM_ImportBankAccount_ServiceTest extends CRM_ImportBankAccount_HeadlessBa
     /**
      * It tests the custom field to contact id mapper function.
      */
-    public function testGetContactsBasedOnCustomField():void
+    public function testGetContactsBasedOnCustomField(): void
     {
         $customData = $this->createCustomField('Contact', 'String', 'Text');
         $keyName = 'custom_'.$customData['field']['id'];
