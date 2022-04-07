@@ -1,5 +1,7 @@
 # import-bank-account
 
+[![CI](https://github.com/reflexive-communications/import-bank-account/actions/workflows/main.yml/badge.svg)](https://github.com/reflexive-communications/import-bank-account/actions/workflows/main.yml)
+
 This extension provides a custom importer.
 
 Constribution import where the contact mapping is based on a contact custom field. If you want to execute this importer,
